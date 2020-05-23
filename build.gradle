@@ -3,10 +3,9 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
 }
-
 group = 'net.rainr'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '14'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -39,12 +38,4 @@ test {
     testLogging {
         events "passed", "skipped", "failed"
     }
-}
-
-
-compileJava {
-    options.compilerArgs += ["--enable-preview"]
-}
-test {
-    jvmArgs '--enable-preview'
 }
